@@ -1,3 +1,4 @@
 nexrad
 ======
-Supervised and Semisuperivsed
+Supervised: Naive Bayes and Neural Network (Feedfoward/Backpropagation)
+Semisuperivsed: Support Vector Machine
