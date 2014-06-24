@@ -1,0 +1,125 @@
+#!/bin/bash
+
+FILENAME=$1
+
+touch ./src/$FILENAME.cpp
+echo "/******************************************************************************* " >> ./src/$FILENAME.cpp
+echo " * Filename      : $FILENAME.cpp" >> ./src/$FILENAME.cpp
+echo " * Header File(s):" >> ./src/$FILENAME.cpp
+echo " * Description   :" >> ./src/$FILENAME.cpp
+echo " * Authors(s)    :" >> ./src/$FILENAME.cpp
+echo " * Date Created  :" >> ./src/$FILENAME.cpp
+echo " * Date Modified :" >> ./src/$FILENAME.cpp
+echo " * Modifier(s)   :" >> ./src/$FILENAME.cpp
+echo " *******************************************************************************/" >> ./src/$FILENAME.cpp
+echo "/************************************" >> ./src/$FILENAME.cpp
+echo "* Included Headers " >> ./src/$FILENAME.cpp
+echo "************************************/" >> ./src/$FILENAME.cpp
+echo "#include \"$FILENAME.hpp\"" >> ./src/$FILENAME.cpp
+echo "#include <iostream>" >> ./src/$FILENAME.cpp
+echo "" >> ./src/$FILENAME.cpp
+echo "/************************************" >> ./src/$FILENAME.cpp
+echo "* Namespaces" >> ./src/$FILENAME.cpp
+echo "************************************/" >> ./src/$FILENAME.cpp
+echo "using namespace std;" >> ./src/$FILENAME.cpp
+echo "" >> ./src/$FILENAME.cpp
+echo "/************************************" >> ./src/$FILENAME.cpp
+echo "* Local Variables" >> ./src/$FILENAME.cpp
+echo "************************************/" >> ./src/$FILENAME.cpp
+echo "" >> ./src/$FILENAME.cpp
+echo "/*******************************************************************************" >> ./src/$FILENAME.cpp
+echo "* Constructor  : (Default)" >> ./src/$FILENAME.cpp
+echo "* Description  : " >> ./src/$FILENAME.cpp
+echo "* Arguments    : " >> ./src/$FILENAME.cpp
+echo "* Remarks      : " >> ./src/$FILENAME.cpp
+echo "********************************************************************************/" >> ./src/$FILENAME.cpp
+echo "$FILENAME::$FILENAME ( void ) { ; }" >> ./src/$FILENAME.cpp
+echo "/*******************************************************************************" >> ./src/$FILENAME.cpp
+echo "* Constructor  : (Copy)" >> ./src/$FILENAME.cpp
+echo "* Description  : " >> ./src/$FILENAME.cpp
+echo "* Arguments    : " >> ./src/$FILENAME.cpp
+echo "* Returns      : " >> ./src/$FILENAME.cpp
+echo "* Remarks      : " >> ./src/$FILENAME.cpp
+echo "********************************************************************************/" >> ./src/$FILENAME.cpp
+echo "$FILENAME::$FILENAME ( $FILENAME& obj ) { ; }" >> ./src/$FILENAME.cpp
+echo "/*******************************************************************************" >> ./src/$FILENAME.cpp
+echo "* Deconstructor: " >> ./src/$FILENAME.cpp
+echo "* Description  : " >> ./src/$FILENAME.cpp
+echo "* Arguments    : " >> ./src/$FILENAME.cpp
+echo "* Remarks      : " >> ./src/$FILENAME.cpp
+echo "********************************************************************************/" >> ./src/$FILENAME.cpp
+echo "$FILENAME::~$FILENAME ( void ) { ; }" >> ./src/$FILENAME.cpp
+echo "/*******************************************************************************" >> ./src/$FILENAME.cpp
+echo "* Constructor  : (Assignment)" >> ./src/$FILENAME.cpp
+echo "* Description  : " >> ./src/$FILENAME.cpp
+echo "* Arguments    : " >> ./src/$FILENAME.cpp
+echo "* Returns      : " >> ./src/$FILENAME.cpp
+echo "* Remarks      : " >> ./src/$FILENAME.cpp
+echo "********************************************************************************/" >> ./src/$FILENAME.cpp
+echo "$FILENAME& $FILENAME::operator=( const $FILENAME& obj ) " >> ./src/$FILENAME.cpp
+echo "{" >> ./src/$FILENAME.cpp
+echo "    if (this != &obj) // prevent self-assignment" >> ./src/$FILENAME.cpp
+echo "    {" >> ./src/$FILENAME.cpp
+echo "        ;" >> ./src/$FILENAME.cpp
+echo "    }" >> ./src/$FILENAME.cpp
+echo "    return *this;" >> ./src/$FILENAME.cpp
+echo "}" >> ./src/$FILENAME.cpp
+echo "/*******************************************************************************" >> ./src/$FILENAME.cpp
+echo "* Function     : " >> ./src/$FILENAME.cpp
+echo "* Description  : " >> ./src/$FILENAME.cpp
+echo "* Arguments    : " >> ./src/$FILENAME.cpp
+echo "* Returns      : " >> ./src/$FILENAME.cpp
+echo "* Remarks      : " >> ./src/$FILENAME.cpp
+echo "********************************************************************************/" >> ./src/$FILENAME.cpp
+
+touch ./src/include/$FILENAME.hpp
+echo "/******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "* Filename      : $FILENAME.hpp" >> ./src/include/$FILENAME.hpp
+echo "* Source File(s): $FILENAME.cpp" >> ./src/include/$FILENAME.hpp
+echo "* Description   :" >> ./src/include/$FILENAME.hpp
+echo "* Authors(s)    :" >> ./src/include/$FILENAME.hpp
+echo "* Date Created  :" >> ./src/include/$FILENAME.hpp
+echo "* Date Modified :" >> ./src/include/$FILENAME.hpp
+echo "* Modifier(s)   :" >> ./src/include/$FILENAME.hpp
+echo "*******************************************************************************/" >> ./src/include/$FILENAME.hpp
+the_char=`echo $FILENAME | tr a-z A-Z`
+the_char1="_H"
+echo "#ifndef $the_char$the_char1" >> ./src/include/$FILENAME.hpp
+echo "#define $the_char$the_char1" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  INCLUDES" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  DEFINES" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  MACROS" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  DATA TYPES" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  EXTERNALS" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "/*******************************************************************************" >> ./src/include/$FILENAME.hpp
+echo "*  CLASS DEFINITIONS" >> ./src/include/$FILENAME.hpp
+echo "********************************************************************************/" >> ./src/include/$FILENAME.hpp
+echo "class $FILENAME" >> ./src/include/$FILENAME.hpp
+echo "{" >> ./src/include/$FILENAME.hpp
+echo "    public: " >> ./src/include/$FILENAME.hpp
+echo "        /* constructors */" >> ./src/include/$FILENAME.hpp
+echo "        $FILENAME ( void ); /* default */" >> ./src/include/$FILENAME.hpp
+echo "        $FILENAME ( $FILENAME& ); /* copy */" >> ./src/include/$FILENAME.hpp
+echo "        $FILENAME& operator= ( const $FILENAME& ); /* assign */" >> ./src/include/$FILENAME.hpp
+echo "        ~$FILENAME ( void );" >> ./src/include/$FILENAME.hpp
+echo "        /* functions */" >> ./src/include/$FILENAME.hpp
+echo "" >> ./src/include/$FILENAME.hpp
+echo "    private:" >> ./src/include/$FILENAME.hpp
+echo "};" >> ./src/include/$FILENAME.hpp
+echo "#endif" >> ./src/include/$FILENAME.hpp
