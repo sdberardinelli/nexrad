@@ -22,6 +22,7 @@
 	{
 		"sublimeclang_options":
 		[
+			"-std=c++11",
 			"-I${project_path}/src/include/"
 		]
 	}

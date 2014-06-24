@@ -8,8 +8,8 @@ inc = src/include
 
 debug = 0
 
-CFlags = -Wall
-LDFlags = 
+CFlags = -Wall -std=c++11
+LDFlags = -lboost_system -lboost_filesystem -lboost_iostreams -lopencv_core -lopencv_highgui -lopencv_imgproc
 libs = 
 libDir =
 
